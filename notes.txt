@@ -1,1 +1,1 @@
-exercise = 3 sets
+exercise = 5 sets
