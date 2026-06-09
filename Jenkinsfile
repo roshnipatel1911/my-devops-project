@@ -57,4 +57,24 @@ pipeline {
             }
         }
     }
+
+    post {
+        success {
+            echo "✅ SUCCESS!"
+            echo "Application ${APP_NAME}:${VERSION} deployed successfully"
+            echo "Users can now access the app"
+        }
+        failure {
+            echo "❌ FAILURE!"
+            echo "Pipeline failed - check logs above"
+            echo "Notifying team..."
+        }
+        always {
+            echo "========================================="
+            echo "Pipeline execution complete"
+            echo "App: ${APP_NAME}"
+            echo "Version: ${VERSION}"
+            echo "========================================="
+        }
+    }
 }
