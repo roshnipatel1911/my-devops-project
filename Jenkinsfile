@@ -61,7 +61,7 @@ pipeline {
     post {
         success {
             echo "✅ SUCCESS!"
-            echo "Application ${APP_NAME}:${VERSION} deployed successfully"
+            echo "Application ${APP_NAME}:${APP_VERSION} deployed successfully"
             echo "Users can now access the app"
         }
         failure {
@@ -73,7 +73,7 @@ pipeline {
             echo "========================================="
             echo "Pipeline execution complete"
             echo "App: ${APP_NAME}"
-            echo "Version: ${VERSION}"
+            echo "Version: ${APP_VERSION}"
             echo "========================================="
         }
     }
